@@ -23,7 +23,7 @@ from System import *
 
 server = raw_input('Server:   ')
 username = raw_input('Username: ')
-password = getpass.getpass('Password: ')
+password = raw_input('Password: ')
 
 # connect to the PLEXOS Connect server
 cxn = plx.PLEXOSConnect()

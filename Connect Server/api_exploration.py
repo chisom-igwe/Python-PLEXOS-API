@@ -8,6 +8,7 @@ Created on Sat Sep 09 20:11:21 2017
 """
 
 # Python .NET interface
+import dotnet
 from dotnet.seamless import add_assemblies, load_assembly#, build_assembly
 
 # load PLEXOS assemblies

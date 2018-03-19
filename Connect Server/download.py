@@ -61,7 +61,7 @@ else:
     ver = cxn.GetDatasetLatestVersion(folder,dataset)
     
     dest = os.path.join(folder,dataset)
-    os.mkdir(dest)
+    os.makedirs(dest)
 
     '''
     Boolean DownloadDatasetVersion(

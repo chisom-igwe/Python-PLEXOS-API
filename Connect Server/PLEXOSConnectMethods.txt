@@ -1,3 +1,160 @@
+String[] GetGroupMembers(
+	String strName
+	)
+Boolean CheckClientExists(
+	String strName
+	)
+Int32 GetClientStatus(
+	String strName
+	)
+Boolean PauseClient(
+	String strName
+	)
+Boolean ResumeClient(
+	String strName
+	)
+Boolean RemoveClient(
+	String strName
+	)
+String GetClientRun(
+	String strClient
+	)
+Int32 GetClientPriority(
+	String strClient
+	)
+Boolean SetClientPriority(
+	String strClient,
+	Int64 nPriority
+	)
+String GetClientProgress(
+	String strClient
+	)
+Boolean AddClientPermission(
+	String strClient,
+	String strAccount
+	)
+Boolean RemoveClientPermission(
+	String strClient,
+	String strAccount
+	)
+Boolean CheckClientPermission(
+	String strClient,
+	String strAccount
+	)
+String[] GetClientPermissions(
+	String strClient
+	)
+String[] GetClientTimeoutSettings(
+	)
+Boolean SetClientTimeoutSettings(
+	Boolean enabled,
+	String timeoutAction,
+	Int32 timeoutDays,
+	Int32 timeoutHours,
+	Int32 timeoutMinutes
+	)
+Boolean AddGroup(
+	String strName
+	)
+Boolean RemoveGroup(
+	String strName
+	)
+Boolean CheckGroupExists(
+	String strName
+	)
+Boolean AddGroupMember(
+	String strGroup,
+	String strClient
+	)
+Boolean RemoveGroupMember(
+	String strGroup,
+	String strClient
+	)
+Boolean AddAccount(
+	String strName,
+	String strPassword,
+	Int32 nRights
+	)
+Boolean RemoveAccount(
+	String strName
+	)
+Boolean CheckAccountExists(
+	String account
+	)
+Int32 GetAccountRights(
+	)
+Int32 GetAccountRights(
+	String strName
+	)
+Boolean SetAccountRights(
+	String account,
+	Int32 rights
+	)
+String[] GetRunIndexes(
+	String strTimeFrom,
+	String strTimeTo[ = -]
+	)
+String[] GetDeletedRunIndexes(
+	String strTimeFrom,
+	String strTimeTo[ = -]
+	)
+String AddRun(
+	String strJobIndex
+	)
+String AddRun(
+	String strFolderPath,
+	String strDataset,
+	String strVersion,
+	String[] strArgs,
+	String strJobset[ = ],
+	String strEngine[ = ],
+	String strClient[ = ],
+	Int32 nPriority[ = 0]
+	)
+String AddRun(
+	String strSourcePath,
+	String[] strArgs,
+	Boolean bSearchTop[ = False],
+	String strJobset[ = ],
+	String strFolderPath[ = ],
+	String strDatasetName[ = ],
+	String strEngine[ = ],
+	String strClient[ = ],
+	Int32 nPriority[ = 0]
+	)
+Boolean RemoveRun(
+	String strRunIndex
+	)
+Int32 GetRunStatus(
+	String strRunIndex
+	)
+Int32 GetRunPriority(
+	String strRunIndex
+	)
+String GetRunTimeStamp(
+	String strRunIndex
+	)
+String GetRunDatasetFolder(
+	String strRunIndex
+	)
+String GetRunDataset(
+	String strRunIndex
+	)
+String GetRunDatasetVersion(
+	String strRunIndex
+	)
+String GetRunJobset(
+	String strRunIndex
+	)
+String[] GetRunArguments(
+	String strRunIndex
+	)
+String GetRunEngine(
+	String strRunIndex
+	)
+String GetRunClient(
+	String strRunIndex
+	)
 String GetRunClientAssigned(
 	String strRunIndex
 	)
@@ -393,163 +550,6 @@ Boolean DownloadEngine(
 Boolean DownloadDeletedEngine(
 	String strEngineName,
 	String strDestination
-	)
-String[] GetGroupMembers(
-	String strName
-	)
-Boolean CheckClientExists(
-	String strName
-	)
-Int32 GetClientStatus(
-	String strName
-	)
-Boolean PauseClient(
-	String strName
-	)
-Boolean ResumeClient(
-	String strName
-	)
-Boolean RemoveClient(
-	String strName
-	)
-String GetClientRun(
-	String strClient
-	)
-Int32 GetClientPriority(
-	String strClient
-	)
-Boolean SetClientPriority(
-	String strClient,
-	Int64 nPriority
-	)
-String GetClientProgress(
-	String strClient
-	)
-Boolean AddClientPermission(
-	String strClient,
-	String strAccount
-	)
-Boolean RemoveClientPermission(
-	String strClient,
-	String strAccount
-	)
-Boolean CheckClientPermission(
-	String strClient,
-	String strAccount
-	)
-String[] GetClientPermissions(
-	String strClient
-	)
-String[] GetClientTimeoutSettings(
-	)
-Boolean SetClientTimeoutSettings(
-	Boolean enabled,
-	String timeoutAction,
-	Int32 timeoutDays,
-	Int32 timeoutHours,
-	Int32 timeoutMinutes
-	)
-Boolean AddGroup(
-	String strName
-	)
-Boolean RemoveGroup(
-	String strName
-	)
-Boolean CheckGroupExists(
-	String strName
-	)
-Boolean AddGroupMember(
-	String strGroup,
-	String strClient
-	)
-Boolean RemoveGroupMember(
-	String strGroup,
-	String strClient
-	)
-Boolean AddAccount(
-	String strName,
-	String strPassword,
-	Int32 nRights
-	)
-Boolean RemoveAccount(
-	String strName
-	)
-Boolean CheckAccountExists(
-	String account
-	)
-Int32 GetAccountRights(
-	)
-Int32 GetAccountRights(
-	String strName
-	)
-Boolean SetAccountRights(
-	String account,
-	Int32 rights
-	)
-String[] GetRunIndexes(
-	String strTimeFrom,
-	String strTimeTo[ = -]
-	)
-String[] GetDeletedRunIndexes(
-	String strTimeFrom,
-	String strTimeTo[ = -]
-	)
-String AddRun(
-	String strJobIndex
-	)
-String AddRun(
-	String strFolderPath,
-	String strDataset,
-	String strVersion,
-	String[] strArgs,
-	String strJobset[ = ],
-	String strEngine[ = ],
-	String strClient[ = ],
-	Int32 nPriority[ = 0]
-	)
-String AddRun(
-	String strSourcePath,
-	String[] strArgs,
-	Boolean bSearchTop[ = False],
-	String strJobset[ = ],
-	String strFolderPath[ = ],
-	String strDatasetName[ = ],
-	String strEngine[ = ],
-	String strClient[ = ],
-	Int32 nPriority[ = 0]
-	)
-Boolean RemoveRun(
-	String strRunIndex
-	)
-Int32 GetRunStatus(
-	String strRunIndex
-	)
-Int32 GetRunPriority(
-	String strRunIndex
-	)
-String GetRunTimeStamp(
-	String strRunIndex
-	)
-String GetRunDatasetFolder(
-	String strRunIndex
-	)
-String GetRunDataset(
-	String strRunIndex
-	)
-String GetRunDatasetVersion(
-	String strRunIndex
-	)
-String GetRunJobset(
-	String strRunIndex
-	)
-String[] GetRunArguments(
-	String strRunIndex
-	)
-String GetRunEngine(
-	String strRunIndex
-	)
-String GetRunClient(
-	String strRunIndex
 	)
 Boolean get_DisplayAlerts(
 	)
